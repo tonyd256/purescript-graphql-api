@@ -4,6 +4,9 @@
   "main": "src/index.js",
   "author": "Tony DiPasquale",
   "license": "MIT",
+  "scripts": {
+    "build": "pulp build -O --skip-entry-point --main API --to output/output.js"
+  },
   "dependencies": {
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
