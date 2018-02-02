@@ -5,8 +5,11 @@
   "author": "Tony DiPasquale",
   "license": "MIT",
   "scripts": {
+    "setup": "yarn install && bower install",
     "pulp": "pulp build -O --skip-entry-point --main API --to output/output.js",
-    "build": "npm run pulp && echo \"module.exports = PS['API'];\" >> output/output.js && cp output/output.js src/api.js"
+    "build": "npm run pulp && echo \"module.exports = PS['API'];\" >> output/output.js && cp output/output.js src/api.js",
+    "start": "node src/index.js",
+    "test": "pulp test"
   },
   "dependencies": {
     "express": "^4.16.2",
