@@ -5,7 +5,8 @@
   "author": "Tony DiPasquale",
   "license": "MIT",
   "scripts": {
-    "build": "pulp build -O --skip-entry-point --main API --to output/output.js"
+    "pulp": "pulp build -O --skip-entry-point --main API --to output/output.js",
+    "build": "npm run pulp && echo \"module.exports = PS['API'];\" >> output/output.js && cp output/output.js src/api.js"
   },
   "dependencies": {
     "express": "^4.16.2",
