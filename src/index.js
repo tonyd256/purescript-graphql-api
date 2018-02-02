@@ -2,6 +2,7 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const fs = require('fs');
 const graphql = require('graphql');
+const api = require('./api');
 
 const app = express();
 const myGraphQLSchema = graphql.buildSchema(
@@ -11,7 +12,7 @@ const myGraphQLSchema = graphql.buildSchema(
 app.use('/', graphqlHTTP({
   schema: myGraphQLSchema,
   graphiql: true,
-  rootValue: { test: function () { return true; } }
+  rootValue: api
 }));
 
 app.listen(4000);
