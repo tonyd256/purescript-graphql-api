@@ -1,3 +1,4 @@
 type Query {
   test: Boolean
+  echo(text: String!): String
 }

@@ -12,7 +12,7 @@ const myGraphQLSchema = graphql.buildSchema(
 app.use('/', graphqlHTTP({
   schema: myGraphQLSchema,
   graphiql: true,
-  rootValue: { test: function () { console.log(arguments); } }
+  rootValue: api
 }));
 
 app.listen(4000);

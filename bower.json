@@ -6,5 +6,9 @@
     "bower_components",
     "output",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.1.1",
+    "purescript-foreign": "^4.0.1"
+  }
 }
